@@ -1,0 +1,22 @@
+"pt-BR":
+ activerecord:
+    models:
+        person: "Pessoa"
+        user: "Usuario"
+        #bank: "Banco"
+        #bank_agreement: "Convênio / Banco"
+        #company: "Companhia"
+        #organ: "Órgão"
+    attributes:
+        person:
+            id: "Identificador"
+            name: "Nome"
+            phone: "Telefone"
+            celphone: "Celular"
+            created_at: "Criado em"
+        user:
+            id: "Identificador"
+            email: "E-mail"
+            role: "Perfil"
+            created_at: "Criado em"
+            off_at: "Desativado em"

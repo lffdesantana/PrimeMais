@@ -1,0 +1,27 @@
+<%= form_for(@person) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= error_tag @person, :name %>
+  </div>
+  <div class="field">
+    <%= f.label :cpf %>
+    <%= f.text_field :cpf %>
+    <%= error_tag @person, :cpf %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+    <%= error_tag @person, :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :celphone %>
+    <%= f.text_field :celphone %>
+    <%= error_tag @person, :celphone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              people_path, :class => 'btn btn-default'  %>
+<% end %>
