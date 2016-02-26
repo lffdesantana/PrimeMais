@@ -2,7 +2,7 @@ class ControlUsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @users = User.where.not(current_user.id)
+    @users = User.where.not(id: current_user.id)
     authorize@users
   end
   # GET /user/1

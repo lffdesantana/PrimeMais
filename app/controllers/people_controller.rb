@@ -10,7 +10,7 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    @people = Person.where(current_user.id)
+    @people = Person.where.not(id: current_user.person_id)
   end
 
   # GET /people/1

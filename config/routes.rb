@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   resources :control_users
-
-  devise_for :users
+  resources :people
+  devise_for :users, :path_names => {:sign_in => "login", :sign_up => "cadastre-se"}
   LOCALES = /en|pt\-BR/
 
 #scope "(:locale)", locale: LOCALES do
-    resources :people
   #end
   get '/:locale' => 'home#index' #, locale: LOCALES
   root 'welcome#index'
