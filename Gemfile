@@ -12,6 +12,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+#Rails forms made easy
+gem 'simple_form', '~> 3.2.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -36,6 +38,16 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Errors
+gem 'better_errors', '~> 2.1.1'
+gem 'binding_of_caller', '~> 0.7.2'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-font-awesome', '~> 4.5.0'
+  gem 'rails-assets-bootstrap-sass', '~> 3.3.6'
+  gem 'rails-assets-modulejs', '~> 1.13.0'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
