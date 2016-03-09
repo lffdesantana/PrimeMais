@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :control_users
   resources :people
-  devise_for :users, :path_names => {:sign_in => "login", :sign_up => "cadastre-se"}
+  devise_for :users, :path_names => {:sign_in => "login", :sign_up => "cadastre-se", :edit => "editar"}
   LOCALES = /en|pt\-BR/
 
 #scope "(:locale)", locale: LOCALES do
