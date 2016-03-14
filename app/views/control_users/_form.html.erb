@@ -1,26 +1,15 @@
-<%= form_for([:control, @user]) do |f| %>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-    <%= error_tag @user, :email %>
+<div class="panel-body">
+  <%= simple_form_for([:control, @user]) do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :email, readonly: true, autofocus: true %>
+        <%= f.input :off_at, as: :date, start_year: Date.today.year,
+                              end_year: Date.today.year,
+                              order: [:day, :month, :year], :include_blank => true %>
+        <%= f.input :person_id,:collection => Person.all,:value_method => :id,:name => "Pessoa", prompt: "Selecione a Pessoa" %>
+        <%= f.input :role, collection: [:normal_user, :admin], required: true %>
   </div>
-  <div class="field">
-    <%= f.label :role%>
-    <%= f.select(:role, [:normal_fser, :admin]) %>
-    <%= error_tag @user, :role %>
-  </div>
-  <div class="field">
-    <%= f.label :off_at %>
-    <%= f.date_select :off_at, :include_blank => true %>
-    <%= error_tag @user, :off_at %>
-  </div>
-  <div class="field">
-    <%= f.label :person_id %>
-    <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: true, :include_blank => true) %>
-    <%= error_tag @user, :person_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+              <%= f.button :submit, "Enviar", class: "btn btn-primary btn-block" %>
   </div>
 <%= link_to t('.back', :default => t("helpers.links.back")),
               control_users_path, :class => 'btn btn-default'  %>

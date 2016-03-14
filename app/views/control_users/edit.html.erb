@@ -1,5 +1,11 @@
 <%- model_class = User -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
+<div class="row centered-form">
+  <div class="col-xs-4 col-sm-4 col-md-4 col-sm-offset2 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Editar</h3>
+      </div>
+        <%= render :partial => 'form' %>
+    </div>
+  </div>
 </div>
-<%= render :partial => 'form' %>
