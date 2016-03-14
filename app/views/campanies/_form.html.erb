@@ -1,0 +1,19 @@
+<%= simple_form_for(@campany) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :cnpj %>
+    <%= f.input :phone %>
+    <%= f.input :obs %>
+    <%= f.input :total_strategy %>
+    <%= f.input :used_strategy %>
+    <%= f.input :total_consultation %>
+    <%= f.input :used_consultation %>
+    <%= f.input :dt_last_consultation %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

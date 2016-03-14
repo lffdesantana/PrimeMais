@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @campany.name %>
+</p>
+
+<p>
+  <strong>Cnpj:</strong>
+  <%= @campany.cnpj %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @campany.phone %>
+</p>
+
+<p>
+  <strong>Obs:</strong>
+  <%= @campany.obs %>
+</p>
+
+<p>
+  <strong>Total strategy:</strong>
+  <%= @campany.total_strategy %>
+</p>
+
+<p>
+  <strong>Used strategy:</strong>
+  <%= @campany.used_strategy %>
+</p>
+
+<p>
+  <strong>Total consultation:</strong>
+  <%= @campany.total_consultation %>
+</p>
+
+<p>
+  <strong>Used consultation:</strong>
+  <%= @campany.used_consultation %>
+</p>
+
+<p>
+  <strong>Dt last consultation:</strong>
+  <%= @campany.dt_last_consultation %>
+</p>
+
+<%= link_to 'Edit', edit_campany_path(@campany) %> |
+<%= link_to 'Back', campanies_path %>
