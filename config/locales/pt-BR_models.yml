@@ -16,6 +16,7 @@
             created_at: "Criado em"
         user:
             id: "Identificador"
+            person_id: "Usuario"
             email: "E-mail"
             role: "Perfil"
             created_at: "Criado em"
