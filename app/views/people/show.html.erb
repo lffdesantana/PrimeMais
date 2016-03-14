@@ -24,6 +24,10 @@
   <dd><%= @person.celphone%></dd>
 </dl>
 
+<dl class="dl-horizontal">
+  <dt><strong><%= "dd" %>:</strong></dt>
+  <dd><%= @person.user.email%></dd>
+</dl>
 <%= link_to t('.back', :default => t("helpers.links.back")),
               people_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
