@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :companies
   resources :control_users
-  resources :people
   devise_for :users, :path_names => {:sign_in => "login", :sign_up => "cadastre-se", :edit => "editar"},:controllers => { registrations: 'registrations' }
   LOCALES = /en|pt\-BR/
 

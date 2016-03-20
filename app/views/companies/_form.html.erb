@@ -1,0 +1,16 @@
+<div class="panel-body">
+  <%= simple_form_for(@company) do |f| %>
+    <%= f.error_notification %>
+        <%= f.input :name %>
+    <%= f.input :cnpj %>
+    <%= f.input :phone %>
+    <%= f.input :obs %>
+    <%= f.input :total_strategy %>
+    <%= f.input :total_consultation %>
+    <div class="form-actions">
+        <%= f.button :submit, "Enviar", class: "btn btn-primary btn-block" %>
+    </div>
+    <%= link_to t('.back', :default => t("helpers.links.back")),
+              companies_path, :class => 'btn btn-default'  %>
+  <% end %>
+</div>

@@ -5,4 +5,17 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "devise/login";
+
+.centered-form{
+  margin-top: 60px;
+}
+
+.links {
+    margin-top: 45px;
+}
+
+.alert {
+    text-align: center;
+    margin-top: 20px;
+
+}
