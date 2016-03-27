@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
     EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
     belongs_to :company
-    #accepts_nested_attributes_for :person#, :company
     enum role:[:normal_user, :admin]
     validates :email,  presence: true
 

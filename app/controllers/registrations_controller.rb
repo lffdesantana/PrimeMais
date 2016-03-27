@@ -2,8 +2,6 @@ class RegistrationsController < Devise::RegistrationsController
 
     def new
         @company = Company.all
-
-       #<%= f.input :person_id,:collection => @people,:value_method => :id,:name => "Pessoa", prompt: "Selecione a Pessoa" %>
         super
         #@user.build_person
     end
