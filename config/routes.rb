@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   resources :companies
   resources :control_users
-  devise_for :users, :path_names => {:sign_in => "login", :sign_up => "cadastre-se", :edit => "editar"},:controllers => { registrations: 'registrations' }
-  LOCALES = /en|pt\-BR/
+  devise_for :users,:controllers => { registrations: 'registrations' }, :path_names => {:sign_in => "login", :sign_up => "cadastre-se", :edit => "editar"}
 
-#scope "(:locale)", locale: LOCALES do
-  #end
-  get '/:locale' => 'home#index' #, locale: LOCALES
+  # i18n to Datatables
+  get 'datatable_i18n', to: 'datatables#datatable_i18n'
+
+  get '/:locale' => 'home#index'
   root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
