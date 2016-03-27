@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.13', '< 0.5'
+
 # Twitter Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 # Use SCSS for stylesheets
@@ -12,6 +13,11 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+
+gem 'jquery-datatables-rails', '~> 3.4'
+gem 'jquery-ui-rails'
+# Paginator
+gem 'will_paginate'
 #Rails forms made easy
 gem 'simple_form', '~> 3.2.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -25,7 +31,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+# jquery-datatables-rails Gem to DataTab
+gem 'jquery-datatables-rails', '~> 3.4'
 # Gem de auth users
 gem 'devise'
 # Gem Pundit Manager Roles Users
