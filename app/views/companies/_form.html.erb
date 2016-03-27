@@ -11,6 +11,6 @@
         <%= f.button :submit, "Enviar", class: "btn btn-primary btn-block" %>
     </div>
     <%= link_to t('.back', :default => t("helpers.links.back")),
-              companies_path, :class => 'btn btn-default'  %>
+              companies_path, :class => 'btn btn-default', :'data-no-turbolink' => true  %>
   <% end %>
 </div>
