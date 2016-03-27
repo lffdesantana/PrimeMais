@@ -35,7 +35,7 @@
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
-               companies_path, :class => 'btn btn-default' %>
+               companies_path, :class => 'btn btn-default', :'data-no-turbolink' => true %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_company_path(@company), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
